@@ -75,6 +75,37 @@ function titleCase(str) {
 console.log(titleCase("I'm a little tea pot"));// should return "I'm A Little Tea Pot".
 console.log(titleCase("sHoRt AnD sToUt"));// should return "Short And Stout".
 
+// Thursday: Sum All Numbers in a Range
+// We'll pass you an array of two numbers. Return the sum of those two numbers and all numbers between them.
+
+//define a function that takes an array as a parameter
+//define sum variable that hold the sum of the numbers
+//define two variable min and max and check which is greater assign it to max and the other to min
+//for loop start at min end at max 
+//sum all the numbers between min and max and return the result
+function sumAll(arr) {
+  let sum = 0;
+  let min = arr[0];
+  let max= arr[1];
+  if(arr[0]>arr[1]){
+    max = arr[0];
+    min = arr[1]
+  }
+  for (let i = min; i <= max; i++) {
+    sum += i;    
+  }  
+  return sum;
+
+}
+console.log(sumAll([1, 4])); // should return 10.
+console.log(sumAll([4, 1])); // should return 10.
+console.log(sumAll([5, 10])); // should return 45
+
+
+
+
+
+
 
 
 
