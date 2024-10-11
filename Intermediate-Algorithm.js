@@ -38,11 +38,11 @@ console.log(largestOfFour(array));
 //write if condition to compare each element length with the maxLength variable
 //if true assign the larger length to the maxLength variable
 //return maxLength variable
-function findLongestWord(string){
+function findLongestWord(string) {
     let wordsArr = string.split(" ");
     let maxLength = wordsArr[0].length;
     for (let i = 1; i < wordsArr.length; i++) {
-         if(wordsArr[i].length > maxLength)
+        if (wordsArr[i].length > maxLength)
             maxLength = wordsArr[i].length;
     }
     return maxLength;
@@ -50,8 +50,32 @@ function findLongestWord(string){
 
 
 str1 = "The quick brown fox jumped over the lazy dog";
-str2 = "May the force be with you";  
+str2 = "May the force be with you";
 
 console.log(findLongestWord(str1)); // should return 6.
 console.log(findLongestWord(str2)); // should return 5.
 
+//Wednesday : Title Case a Sentence
+// Return the provided string with the first letter of each word capitalized. Make sure the rest of the word is in lowercase.
+// For the purpose of this exercise, you should also capitalize on connecting words like "the" and "of".
+
+//define a function that takes a string para
+//convert the sting to an array
+//for loop on the array and alter each element by capitalize the first letter using charAt and toUpperCase methods
+//add the rest of each word to the first letter and convert it to lower case using slice and toLowerCase methods
+//convert the result array to string using join method and return it
+function titleCase(str) {
+    let strArray = str.split(' ');
+    for (let i = 0; i < strArray.length; i++) {
+        strArray[i] = strArray[i].charAt(0).toUpperCase() + strArray[i].slice(1).toLowerCase();
+    }
+    return strArray.join(' ');
+}
+
+console.log(titleCase("I'm a little tea pot"));// should return "I'm A Little Tea Pot".
+console.log(titleCase("sHoRt AnD sToUt"));// should return "Short And Stout".
+
+
+
+
+  
