@@ -71,6 +71,38 @@ console.log(magicSquares([[3, 5, 7], [8, 1, 6], [4, 9, 2]]));
 console.log(magicSquares([[8, 1, 6], [7, 5, 3], [4, 9, 2]]));
 
 
+//Wednesday : Search and Replace
+// Perform a search and replace the sentence using the arguments provided and return the new sentence.
+// The first argument is the sentence to perform the search and replace on.
+// The second argument is the word that you will be replacing (before).
+// The third argument is what you will be replacing the second argument with (after).
+
+//define a function with three string parameter
+//convert the str to an array 
+//for loop through the array
+//if statement to check if any array elements match the word
+//true then check if the first letter is in upper case so change it with the new word after changing the first letter to upper case
+//else change it with first letter in lower case
+//convert the array to a string and return it 
+
+function myReplace(str, before, after) {
+    let strarr = str.split(" ");
+    for (let i = 0; i < strarr.length; i++) {
+        if(strarr[i] === before){
+            if(strarr[i][0] == strarr[i][0].toUpperCase())
+                strarr[i] = after[0].toUpperCase() + after.slice(1);
+            else
+                strarr[i] = after[0].toLowerCase() + after.slice(1);            
+        }        
+    }
+    return strarr.join(' ');
+  }
+  console.log(myReplace("A quick brown fox jumped over the lazy dog", "jumped", "Leaped"));
+  console.log(myReplace("A quick brown fox Jumped over the lazy dog", "Jumped", "leaped"));
+
+  
+
+
 
 
 
