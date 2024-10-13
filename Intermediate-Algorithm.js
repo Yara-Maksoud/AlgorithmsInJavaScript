@@ -101,6 +101,34 @@ console.log(sumAll([1, 4])); // should return 10.
 console.log(sumAll([4, 1])); // should return 10.
 console.log(sumAll([5, 10])); // should return 45
 
+//Friday: Fibonacci Sequence
+
+//define a function takes number as a parameter
+//if condition to check if the number is 1 or 2 so return 1
+//then define three variable to hold the previous two numbers and the sum of them
+//while loop to go through the number greater than 2 and calculate the sum of the two previous numbers
+//return the sum
+
+function fibonacci(num) {
+
+   if(num ===1 || num ===2)
+    return 1;
+   let num1 = 1;
+   let num2 = 1;
+   let sum = 0;
+   while(num > 2){
+    sum = num1 + num2;
+    num1 = num2;
+    num2 = sum;
+    num--;
+   }
+   return sum;
+
+}
+
+console.log(fibonacci(43));
+console.log(fibonacci(7));
+
 
 
 
