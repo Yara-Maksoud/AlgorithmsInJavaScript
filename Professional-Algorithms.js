@@ -110,7 +110,7 @@ function myReplace(str, before, after) {
 //define two variable sum to hold the sum of all the prime numbers and isPrime to hold true if the number is prime, false if not
 //for loop star at 2 end at number
 //set isPrime to true then second for loop to check if each number is prime or not
-//if statement t check the remain of the division 
+//if statement to check the remain of the division 
 //true then the number is not prime and break to go out from the second loop
 //if the number is prime then add it to sum and return the sum at the end
 function sumPrimes(num) {
@@ -119,9 +119,11 @@ function sumPrimes(num) {
     for (let i = 2; i <= num; i++) {
         isPrime = true;
         for (let j = 2; j <= i; j++) {
-            if (i % j === 0 && i != j)
+            if (i % j === 0 && i != j){
                 isPrime = false;
-            break;
+                break;
+            }
+               
         }
         if (isPrime)
             sum += i;
@@ -131,3 +133,24 @@ function sumPrimes(num) {
 console.log(sumPrimes(10)); // should return 17.
 console.log(sumPrimes(977)); // should return 73156.
 
+//Friday: Sum All Odd Fibonacci
+
+  function sumFibs(num) {
+    let prev = 1, current = 1, sum = 0;
+  
+    while (prev <= num) {
+      if (prev % 2 !== 0) {
+        sum += prev;
+      }
+  
+      let next = prev + current;
+      prev = current;
+      current = next;
+    }
+  
+    return sum;
+  }
+  console.log(sumFibs(1));
+  console.log(sumFibs(2));
+
+  console.log(sumFibs(10));
